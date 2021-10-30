@@ -20,46 +20,49 @@ public class Class_5_Exception_TryCatchFinale {
 	*/
 	
 	public static void main(String[] args) {
-	
-		//Built-in exceptions - ArrayIndexOutOfBoundsException
+		
+		//Built-in Exceptions - ArrayIndexOutOfBoundsException
 		
 		try {
-			int[] ageGroupA = new int[]{25, 35, 32, 38, 40, 50};
-			System.out.println("Group A student age = " + ageGroupA[10]);
-		} catch (Exception e){
-			System.out.println("Array Index Out Of Bounds, Please check array index");
-		} 
-		
-		// Built-in exceptions handling - NumberFormatException
-		
-		try {
-			int num = Integer.parseInt("Rasel");
-			System.out.println("Value of num int = " + num);
-		} catch (NumberFormatException e){
-			System.out.println("Number format exception, Please make sure input string is a number");
+				int[] ageGroup = new int[]{25, 35, 32, 38, 40, 45};
+				System.out.println("Student Age = "+ ageGroup[10]);
+		} catch (Exception e) {
+				System.out.println("Test 20 failed, continiued to test 21 because of Array Index Out of Bounds, Please check array index");
+				e.printStackTrace();
 		}
 		
-		// User Defined Exceptions
+		//Built-in Exceptions - NumberFormatException
 		
 		try {
-			throw new myException("Test User Defined Exception, error message");
+				int num = Integer.parseInt("Rasel");
+				System.out.println("Value of num int = " + num);
+		} catch (NumberFormatException e) {
+				System.out.println("Number format execption, Please make sure input string is a number");
+				e.printStackTrace();
+		}
+		
+		// User Defined Exception 
+		
+		try { 
+			throw new myException("Test User Defined Exception, error message !!!");
 		} catch (myException e){
 			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 		finally {
 			System.out.println("Completed Java Exception handling using try-catch, Test complete !");
 		}
 	}
-
 }
+
 
 class myException extends Exception{
 	
 	String str1;
 	
-	public myException(String str2){
-		str1 = str2;
+	public myException(String srt2){
+		str1 = srt2;
 	}
 	
 	public String toString(){

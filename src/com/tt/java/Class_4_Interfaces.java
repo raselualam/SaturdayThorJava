@@ -16,8 +16,8 @@ public interface Class_4_Interfaces {
 		
 	}
 	
-	//Class 			--- extends 	--->	Class
-	//Abstract Class 	--- extends 	---> 	Class
-	//Interface			--- Implements	--->	Class
-	//Interface	 		--- extends		---> 	Interface	
+	//Class 			--- extends 	---	Class
+	//Abstract Class 	--- extends 	---	Class
+	//Interface			--- Implements	---	Class
+	//Interface	 		--- extends		---	Interface	
 }

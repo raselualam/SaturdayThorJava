@@ -17,6 +17,7 @@ public class Class_5_Singleton {
 		return objSingleton;
 	}
 	
+	
 	//Method protected by singleton-nese
 	protected static void demo(){
 		System.out.println("Demo method for singleton class");
